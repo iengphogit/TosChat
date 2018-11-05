@@ -9,12 +9,20 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var sc: UIScrollView!
+    
     override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        sc.frame = self.view.frame
+        sc.contentSize = CGSize(width: self.view.frame.size.width, height: 1000)
+        sc.translatesAutoresizingMaskIntoConstraints = true
+        self.view.addSubview(sc)
+        
     }
+     
 
-
+    
+    
 }
 
