@@ -16,23 +16,9 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f47-ak-DoA">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </scrollView>
-                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="f47-ak-DoA" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Owe-vW-eVN"/>
-                            <constraint firstItem="f47-ak-DoA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="o5j-CW-RJP"/>
-                            <constraint firstItem="f47-ak-DoA" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="tzC-l8-PGz"/>
-                            <constraint firstItem="f47-ak-DoA" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="vwF-Kr-rM4"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <connections>
-                        <outlet property="sc" destination="f47-ak-DoA" id="HMU-tf-oUM"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

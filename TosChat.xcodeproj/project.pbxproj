@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C224147F2191288900C28FF1 /* PasswordStength.swift in Sources */ = {isa = PBXBuildFile; fileRef = C224147E2191288900C28FF1 /* PasswordStength.swift */; };
+		C235D13D218FFA060029E964 /* UIColorHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = C235D13C218FFA060029E964 /* UIColorHex.swift */; };
+		C235D1402190041D0029E964 /* Montserrat-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C235D13F219003940029E964 /* Montserrat-Black.ttf */; };
+		C235D14221902E1D0029E964 /* UIButtonX.swift in Sources */ = {isa = PBXBuildFile; fileRef = C235D14121902E1D0029E964 /* UIButtonX.swift */; };
 		C291D5A4218C240700276AFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C291D5A3218C240700276AFC /* AppDelegate.swift */; };
 		C291D5A6218C240700276AFC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C291D5A5218C240700276AFC /* ViewController.swift */; };
 		C291D5A9218C240700276AFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C291D5A7218C240700276AFC /* Main.storyboard */; };
@@ -16,6 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C224147E2191288900C28FF1 /* PasswordStength.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordStength.swift; sourceTree = "<group>"; };
+		C235D13C218FFA060029E964 /* UIColorHex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorHex.swift; sourceTree = "<group>"; };
+		C235D13F219003940029E964 /* Montserrat-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Black.ttf"; sourceTree = "<group>"; };
+		C235D14121902E1D0029E964 /* UIButtonX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonX.swift; sourceTree = "<group>"; };
 		C291D5A0218C240700276AFC /* TosChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TosChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C291D5A3218C240700276AFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C291D5A5218C240700276AFC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -37,6 +45,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C224147D2191286700C28FF1 /* RegularExpression */ = {
+			isa = PBXGroup;
+			children = (
+				C224147E2191288900C28FF1 /* PasswordStength.swift */,
+			);
+			path = RegularExpression;
+			sourceTree = "<group>";
+		};
+		C235D13E219003850029E964 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C235D13F219003940029E964 /* Montserrat-Black.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
+		C235D143219044DB0029E964 /* Singletons */ = {
+			isa = PBXGroup;
+			children = (
+				C291D5A3218C240700276AFC /* AppDelegate.swift */,
+			);
+			path = Singletons;
+			sourceTree = "<group>";
+		};
+		C235D144219044EA0029E964 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C235D145219044F30029E964 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C235D146219044FC0029E964 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C291D5A5218C240700276AFC /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		C291D597218C240700276AFC = {
 			isa = PBXGroup;
 			children = (
@@ -56,13 +110,19 @@
 		C291D5A2218C240700276AFC /* TosChat */ = {
 			isa = PBXGroup;
 			children = (
-				C291D5A3218C240700276AFC /* AppDelegate.swift */,
-				C291D5A5218C240700276AFC /* ViewController.swift */,
+				C224147D2191286700C28FF1 /* RegularExpression */,
+				C235D146219044FC0029E964 /* Controller */,
+				C235D145219044F30029E964 /* View */,
+				C235D144219044EA0029E964 /* Model */,
+				C235D143219044DB0029E964 /* Singletons */,
+				C235D13E219003850029E964 /* fonts */,
 				C291D5A7218C240700276AFC /* Main.storyboard */,
 				C291D5AA218C240700276AFC /* Assets.xcassets */,
 				C291D5AC218C240700276AFC /* LaunchScreen.storyboard */,
 				C291D5AF218C240700276AFC /* Info.plist */,
 				C291D5B5218C3B0B00276AFC /* LogInTableViewCell.swift */,
+				C235D13C218FFA060029E964 /* UIColorHex.swift */,
+				C235D14121902E1D0029E964 /* UIButtonX.swift */,
 			);
 			path = TosChat;
 			sourceTree = "<group>";
@@ -126,6 +186,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C291D5AE218C240700276AFC /* LaunchScreen.storyboard in Resources */,
+				C235D1402190041D0029E964 /* Montserrat-Black.ttf in Resources */,
 				C291D5AB218C240700276AFC /* Assets.xcassets in Resources */,
 				C291D5A9218C240700276AFC /* Main.storyboard in Resources */,
 			);
@@ -139,6 +200,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C291D5A6218C240700276AFC /* ViewController.swift in Sources */,
+				C235D14221902E1D0029E964 /* UIButtonX.swift in Sources */,
+				C224147F2191288900C28FF1 /* PasswordStength.swift in Sources */,
+				C235D13D218FFA060029E964 /* UIColorHex.swift in Sources */,
 				C291D5B6218C3B0B00276AFC /* LogInTableViewCell.swift in Sources */,
 				C291D5A4218C240700276AFC /* AppDelegate.swift in Sources */,
 			);
