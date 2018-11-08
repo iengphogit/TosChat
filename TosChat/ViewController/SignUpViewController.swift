@@ -13,6 +13,11 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     var userNamer: String = ""
     var userPassword: String = ""
     var userConfirmPassword: String = ""
+    
+    var isAttemed: Bool = false
+    let userNameLabelMessage = UILabel()
+    let userNamePasswordLabelMessage = UILabel()
+    let userNameConfirmLabelMessage = UILabel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -85,7 +90,6 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         titleLabel.leadingAnchor.constraint(equalTo: mLogo.trailingAnchor, constant: 8).isActive = true
         
         
-        
         let userNameEdt = UITextField()
         signUpView.addSubview(userNameEdt)
         userNameEdt.placeholder = "Email & Phone"
@@ -107,6 +111,18 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         lineView.trailingAnchor.constraint(equalTo: signUpView.trailingAnchor, constant: -16).isActive = true
         lineView.heightAnchor.constraint(equalToConstant: 0.5).isActive = true
         
+        //Username error message
+        signUpView.addSubview(userNameLabelMessage)
+        userNameLabelMessage.text = "N/A"
+        userNameLabelMessage.textColor = .red
+        userNameLabelMessage.isHidden = true
+        userNameLabelMessage.font = UIFont(name: userNameLabelMessage.font.fontName, size: 12)
+        
+        userNameLabelMessage.translatesAutoresizingMaskIntoConstraints = false
+        userNameLabelMessage.topAnchor.constraint(equalTo: lineView.bottomAnchor, constant: 8).isActive = true
+        userNameLabelMessage.leadingAnchor.constraint(equalTo: signUpView.leadingAnchor, constant: 16).isActive = true
+        userNameLabelMessage.trailingAnchor.constraint(equalTo: signUpView.trailingAnchor, constant: -16).isActive = true
+        
         let userPasswordEdit = UITextField()
         signUpView.addSubview(userPasswordEdit)
         userPasswordEdit.placeholder = "Password"
@@ -116,7 +132,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         userPasswordEdit.addTarget(self, action: #selector(self.onEditChanged(_:)), for: UIControl.Event.editingChanged)
         
         userPasswordEdit.translatesAutoresizingMaskIntoConstraints = false
-        userPasswordEdit.topAnchor.constraint(equalTo: lineView.bottomAnchor, constant: 24).isActive = true
+        userPasswordEdit.topAnchor.constraint(equalTo: userNameLabelMessage.bottomAnchor, constant: 8).isActive = true
         userPasswordEdit.leadingAnchor.constraint(equalTo: signUpView.leadingAnchor, constant: 16).isActive = true
         userPasswordEdit.trailingAnchor.constraint(equalTo: signUpView.trailingAnchor, constant: -16).isActive = true
         
@@ -129,6 +145,18 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         lineView2.trailingAnchor.constraint(equalTo: signUpView.trailingAnchor, constant: -16).isActive = true
         lineView2.heightAnchor.constraint(equalToConstant: 0.5).isActive = true
         
+        
+        signUpView.addSubview(userNamePasswordLabelMessage)
+        userNamePasswordLabelMessage.text = "N/A"
+        userNamePasswordLabelMessage.textColor = .red
+        userNamePasswordLabelMessage.isHidden = true
+        userNamePasswordLabelMessage.font = UIFont(name: userNamePasswordLabelMessage.font.fontName, size: 12)
+        
+        userNamePasswordLabelMessage.translatesAutoresizingMaskIntoConstraints = false
+        userNamePasswordLabelMessage.topAnchor.constraint(equalTo: lineView2.bottomAnchor, constant: 8).isActive = true
+        userNamePasswordLabelMessage.leadingAnchor.constraint(equalTo: signUpView.leadingAnchor, constant: 16).isActive = true
+        userNamePasswordLabelMessage.trailingAnchor.constraint(equalTo: signUpView.trailingAnchor, constant: -16).isActive = true
+        
         let userConfirmPassWordEdit = UITextField()
         signUpView.addSubview(userConfirmPassWordEdit)
         userConfirmPassWordEdit.placeholder = "Confirm"
@@ -138,7 +166,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         userConfirmPassWordEdit.addTarget(self, action: #selector(self.onEditChanged(_:)), for: UIControl.Event.editingChanged)
         
         userConfirmPassWordEdit.translatesAutoresizingMaskIntoConstraints = false
-        userConfirmPassWordEdit.topAnchor.constraint(equalTo: lineView2.bottomAnchor, constant: 24).isActive = true
+        userConfirmPassWordEdit.topAnchor.constraint(equalTo: userNamePasswordLabelMessage.bottomAnchor, constant: 8).isActive = true
         userConfirmPassWordEdit.leadingAnchor.constraint(equalTo: signUpView.leadingAnchor, constant: 16).isActive = true
         userConfirmPassWordEdit.trailingAnchor.constraint(equalTo: signUpView.trailingAnchor, constant: -16).isActive = true
         
@@ -151,6 +179,19 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         lineView3.trailingAnchor.constraint(equalTo: signUpView.trailingAnchor, constant: -16).isActive = true
         lineView3.heightAnchor.constraint(equalToConstant: 0.5).isActive = true
         
+    
+        signUpView.addSubview(userNameConfirmLabelMessage)
+        userNameConfirmLabelMessage.text = "N/A"
+        userNameConfirmLabelMessage.textColor = .red
+        userNameConfirmLabelMessage.isHidden = true
+        userNameConfirmLabelMessage.font = UIFont(name: userNameConfirmLabelMessage.font.fontName, size: 12)
+        
+        userNameConfirmLabelMessage.translatesAutoresizingMaskIntoConstraints = false
+        userNameConfirmLabelMessage.topAnchor.constraint(equalTo: lineView3.bottomAnchor, constant: 8).isActive = true
+        userNameConfirmLabelMessage.leadingAnchor.constraint(equalTo: signUpView.leadingAnchor, constant: 16).isActive = true
+        userNameConfirmLabelMessage.trailingAnchor.constraint(equalTo: signUpView.trailingAnchor, constant: -16).isActive = true
+
+        
         let registerBtn = UIButton()
         signUpView.addSubview(registerBtn)
         registerBtn.setTitle("REGISTER", for: UIControl.State.normal)
@@ -162,7 +203,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         
         
         registerBtn.translatesAutoresizingMaskIntoConstraints = false
-        registerBtn.topAnchor.constraint(equalTo: lineView3.bottomAnchor, constant: 24).isActive = true
+        registerBtn.topAnchor.constraint(equalTo: userNameConfirmLabelMessage.bottomAnchor, constant: 8).isActive = true
         registerBtn.leadingAnchor.constraint(equalTo: signUpView.leadingAnchor, constant: 8).isActive = true
 //        registerBtn.trailingAnchor.constraint(equalTo: signUpView.trailingAnchor, constant: -8).isActive = true
         registerBtn.heightAnchor.constraint(equalToConstant: 40).isActive = true
@@ -227,10 +268,28 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         switch (textField.tag ) {
         case 1:
             self.userNamer = textField.text ?? ""
+            if self.isAttemed && self.checkUsername(textField.text ?? "") {
+                userNameLabelMessage.isHidden = true
+            }else{
+                userNameLabelMessage.isHidden = false
+            }
         case 2:
             self.userPassword = textField.text ?? ""
+            if self.isAttemed && self.checkPassword(textField.text ?? "") {
+                userNamePasswordLabelMessage.isHidden = true
+                userNamePasswordLabelMessage.numberOfLines = 1
+            }else{
+                userNamePasswordLabelMessage.isHidden = false
+                userNamePasswordLabelMessage.numberOfLines = 3
+            }
         case 3:
             self.userConfirmPassword = textField.text ?? ""
+            if self.isAttemed && (self.userPassword == self.userConfirmPassword) {
+                userNameConfirmLabelMessage.isHidden = true
+            }else{
+                userNameConfirmLabelMessage.isHidden = false
+            }
+            
         default:
             self.userNamer = ""
             self.userPassword = ""
@@ -239,7 +298,52 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     }
     
     @objc func submitRegister(_ button: UIButton){
-        print("Name: \(self.userNamer) Pass: \(self.userPassword) Confirm: \(self.userConfirmPassword)")
+        //print("Name: \(self.userNamer) Pass: \(self.userPassword) Confirm: \(self.userConfirmPassword)")
+        self.isAttemed = true
+        var isValid: Bool = false
+        
+        userNameLabelMessage.text = "Invalid email address. eg. example@mail.com"
+        if checkUsername(self.userNamer) {
+            userNameLabelMessage.isHidden = true
+            isValid = true
+        } else {
+            userNameLabelMessage.isHidden = false
+            isValid = false
+        }
+        
+        userNamePasswordLabelMessage.text = "Invalid password. Your password must be at least 8 characters long, contain at least one number and have a mixture of uppercase and lowercase letters."
+        if checkPassword(self.userPassword) && !self.userPassword.isEmpty {
+            userNamePasswordLabelMessage.isHidden = true
+            isValid = true
+        }else{
+            userNamePasswordLabelMessage.isHidden = false
+            userNamePasswordLabelMessage.contentMode = .scaleToFill
+            userNamePasswordLabelMessage.numberOfLines = 3
+            isValid = false
+        }
+        
+        userNameConfirmLabelMessage.text = "Your password and confirmation password do not match."
+        if self.userPassword == self.userConfirmPassword && !self.userConfirmPassword.isEmpty {
+            userNameConfirmLabelMessage.isHidden = true
+            isValid = true
+        }else{
+            userNameConfirmLabelMessage.isHidden = false
+            isValid = false
+        }
+        
+        print("Test: \(isValid)")
+        
+    }
+    
+    func checkUsername(_ text: String) -> Bool {
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Z0-9a-z.-]+\\.[A-Za-z]{2,64}"
+        let checkMail = NSPredicate(format: "SELF MATCHES %@", emailRegEx)
+        return checkMail.evaluate(with: text)
+    }
+    
+    func checkPassword(_ text: String) -> Bool {
+        let regex = try! NSRegularExpression(pattern: "(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z]).{8,}")
+        return regex.matches(text)
     }
     
     @objc func gotoSignIn(){
