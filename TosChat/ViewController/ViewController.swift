@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     var userNameString: String?
     var userPasswordString: String?
     override func viewDidLoad() {
+        self.view.backgroundColor = .white
         /*
         
         sc.frame = self.view.frame
@@ -160,6 +161,51 @@ class ViewController: UIViewController {
         loginButton.addTarget(self, action: #selector(self.submitLogin(_:)), for: .touchUpInside)
         loginButton.tag = 12
         loginButton.accessibilityValue = "I'm here to say the Earth!"
+        
+        
+        let footerView = UIView()
+        self.view.addSubview(footerView)
+        footerView.backgroundColor = UIColor.init(netHex: 0xf4feff)
+        footerView.translatesAutoresizingMaskIntoConstraints = false
+        footerView.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        footerView.widthAnchor.constraint(equalToConstant: self.view.frame.width).isActive = true
+//        footerView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
+//        footerView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
+        footerView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor).isActive = true
+    
+        let horizontalStackView = UIStackView()
+        footerView.addSubview(horizontalStackView)
+        
+        horizontalStackView.axis = .horizontal
+        horizontalStackView.alignment = .center
+        horizontalStackView.distribution = .equalSpacing
+        horizontalStackView.spacing = 3
+        
+        horizontalStackView.translatesAutoresizingMaskIntoConstraints = false
+//        horizontalStackView.topAnchor.constraint(equalTo: footerView.topAnchor).isActive = true
+//        horizontalStackView.leadingAnchor.constraint(equalTo: footerView.leadingAnchor).isActive = true
+//        horizontalStackView.trailingAnchor.constraint(equalTo: footerView.trailingAnchor).isActive = true
+//        horizontalStackView.bottomAnchor.constraint(equalTo: footerView.bottomAnchor).isActive = true
+        horizontalStackView.centerXAnchor.constraint(equalTo: footerView.centerXAnchor).isActive = true
+        horizontalStackView.centerYAnchor.constraint(equalTo: footerView.centerYAnchor).isActive = true
+        
+        let dontHaveAnAccLabel = UILabel()
+        dontHaveAnAccLabel.text = "Don't have an account?"
+        dontHaveAnAccLabel.textColor = .gray
+        
+        let signUpBtn = UIButton()
+        signUpBtn.setTitle("Sign Up", for: .normal)
+        signUpBtn.setTitleColor(UIColor.blue, for: UIControl.State.normal)
+        horizontalStackView.addArrangedSubview(dontHaveAnAccLabel)
+        horizontalStackView.addArrangedSubview(signUpBtn)
+        
+        signUpBtn.addTarget(self, action: #selector(self.gotoSignUpVC), for: .touchUpInside)
+        
+    }
+    @objc func gotoSignUpVC() {
+        dismiss(animated: true, completion: nil)
+        let signUpViewController = SignUpViewController()
+        self.present(signUpViewController, animated: true, completion: nil)
     }
     
     @objc func onEditingChanged(_ textField: UITextField){
@@ -177,7 +223,7 @@ class ViewController: UIViewController {
 //        print("\(userNameString ?? "empty") \(userPasswordString ?? "empty") \(isValidEmail(emailString: userNameString ?? "nil")) Test RegEx: \(checkRegEx(text: userPasswordString ?? ""))")
         //Only number ^[0-9]*$
         let regex = try! NSRegularExpression(pattern: "(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z]).{8,}")
-        let a = regex.matches(userPasswordString!)
+        let a = regex.matches(userPasswordString ?? "")
         print("\(a)")
     }
     
