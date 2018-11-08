@@ -1,0 +1,6 @@
+framework module Pods_TosChat {
+  umbrella header "Pods-TosChat-umbrella.h"
+
+  export *
+  module * { export * }
+}

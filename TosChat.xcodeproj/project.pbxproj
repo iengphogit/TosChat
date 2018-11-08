@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C201A99721929C15004E43D6 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C201A99621929C15004E43D6 /* SignUpViewController.swift */; };
+		C201A99921940D32004E43D6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C201A99821940D32004E43D6 /* GoogleService-Info.plist */; };
 		C224147F2191288900C28FF1 /* PasswordStength.swift in Sources */ = {isa = PBXBuildFile; fileRef = C224147E2191288900C28FF1 /* PasswordStength.swift */; };
 		C235D13D218FFA060029E964 /* UIColorHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = C235D13C218FFA060029E964 /* UIColorHex.swift */; };
 		C235D1402190041D0029E964 /* Montserrat-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C235D13F219003940029E964 /* Montserrat-Black.ttf */; };
@@ -18,10 +19,13 @@
 		C291D5AB218C240700276AFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C291D5AA218C240700276AFC /* Assets.xcassets */; };
 		C291D5AE218C240700276AFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C291D5AC218C240700276AFC /* LaunchScreen.storyboard */; };
 		C291D5B6218C3B0B00276AFC /* LogInTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C291D5B5218C3B0B00276AFC /* LogInTableViewCell.swift */; };
+		F2CFF20636BAE24CF1FD14E1 /* Pods_TosChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 880F9D2429AD2D4282DBBD21 /* Pods_TosChat.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		880F9D2429AD2D4282DBBD21 /* Pods_TosChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TosChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C201A99621929C15004E43D6 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		C201A99821940D32004E43D6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C224147E2191288900C28FF1 /* PasswordStength.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordStength.swift; sourceTree = "<group>"; };
 		C235D13C218FFA060029E964 /* UIColorHex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorHex.swift; sourceTree = "<group>"; };
 		C235D13F219003940029E964 /* Montserrat-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Black.ttf"; sourceTree = "<group>"; };
@@ -34,6 +38,8 @@
 		C291D5AD218C240700276AFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C291D5AF218C240700276AFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C291D5B5218C3B0B00276AFC /* LogInTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInTableViewCell.swift; sourceTree = "<group>"; };
+		D201039D5FBF5203CFB9BC75 /* Pods-TosChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TosChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-TosChat/Pods-TosChat.release.xcconfig"; sourceTree = "<group>"; };
+		ED814958CAD61F62B89DE656 /* Pods-TosChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TosChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TosChat/Pods-TosChat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,12 +47,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2CFF20636BAE24CF1FD14E1 /* Pods_TosChat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		06159CE8F71D462344318AE1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				880F9D2429AD2D4282DBBD21 /* Pods_TosChat.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C224147D2191286700C28FF1 /* RegularExpression */ = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +107,8 @@
 			children = (
 				C291D5A2218C240700276AFC /* TosChat */,
 				C291D5A1218C240700276AFC /* Products */,
+				EB61D98899264BF6818DA37D /* Pods */,
+				06159CE8F71D462344318AE1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -118,8 +135,18 @@
 				C291D5B5218C3B0B00276AFC /* LogInTableViewCell.swift */,
 				C235D13C218FFA060029E964 /* UIColorHex.swift */,
 				C235D14121902E1D0029E964 /* UIButtonX.swift */,
+				C201A99821940D32004E43D6 /* GoogleService-Info.plist */,
 			);
 			path = TosChat;
+			sourceTree = "<group>";
+		};
+		EB61D98899264BF6818DA37D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ED814958CAD61F62B89DE656 /* Pods-TosChat.debug.xcconfig */,
+				D201039D5FBF5203CFB9BC75 /* Pods-TosChat.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,9 +156,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C291D5B2218C240700276AFC /* Build configuration list for PBXNativeTarget "TosChat" */;
 			buildPhases = (
+				4CC0EE46174F75F0A0A505BD /* [CP] Check Pods Manifest.lock */,
 				C291D59C218C240700276AFC /* Sources */,
 				C291D59D218C240700276AFC /* Frameworks */,
 				C291D59E218C240700276AFC /* Resources */,
+				364EE6ECDBDD4D3150C12673 /* [CP] Embed Pods Frameworks */,
+				D79470DD4D806C46482FD5AA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -182,12 +212,83 @@
 			files = (
 				C291D5AE218C240700276AFC /* LaunchScreen.storyboard in Resources */,
 				C235D1402190041D0029E964 /* Montserrat-Black.ttf in Resources */,
+				C201A99921940D32004E43D6 /* GoogleService-Info.plist in Resources */,
 				C291D5AB218C240700276AFC /* Assets.xcassets in Resources */,
 				C291D5A9218C240700276AFC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		364EE6ECDBDD4D3150C12673 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TosChat/Pods-TosChat-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TosChat/Pods-TosChat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4CC0EE46174F75F0A0A505BD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TosChat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D79470DD4D806C46482FD5AA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TosChat/Pods-TosChat-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C291D59C218C240700276AFC /* Sources */ = {
@@ -344,6 +445,7 @@
 		};
 		C291D5B3218C240700276AFC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED814958CAD61F62B89DE656 /* Pods-TosChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -361,6 +463,7 @@
 		};
 		C291D5B4218C240700276AFC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D201039D5FBF5203CFB9BC75 /* Pods-TosChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
